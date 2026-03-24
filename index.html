@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trueno Coffee House | Cabo San Lucas | Especialidad | Pet Friendly | Comunidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS RESET */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f8f4ef; color: #333; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        /* VARIABLES */
+        :root { --brand-coral: #d1755a; --brand-cream: #f8f4ef; --brand-dark-blue: #1a2a47; --brand-green: #5a7d65; --brand-text: #333; --brand-accent-red: #da3e3e; }
+
+        /* GENERAL CLASSES */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-coral { color: var(--brand-coral); }
+        .text-bold { font-weight: 700; }
+        .hand-written { font-family: 'Caveat', cursive; font-size: 1.3rem; }
+        .icon { font-size: 1.5rem; vertical-align: middle; }
+        
+        /* HEADER */
+        header { background-color: var(--brand-cream); padding: 20px 0; border-bottom: 2px solid var(--brand-coral); }
+        .header-content { display: flex; align-items: center; justify-content: space-between; }
+        .logo-group { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .logo-text { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--brand-coral); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-text span { font-size: 2.2rem; }
+        .tagline { color: var(--brand-coral); font-size: 0.9rem; font-weight: 300; letter-spacing: 1.5px; margin-bottom: 5px; }
+        .location { color: var(--brand-coral); font-size: 0.8rem; font-weight: 400; font-family: 'Caveat', cursive; }
+        
+        nav ul { list-style: none; display: flex; gap: 30px; font-weight: 400; font-size: 1rem; }
+        nav a { text-decoration: none; color: var(--brand-dark-blue); transition: color 0.3s ease; }
+        nav a:hover { color: var(--brand-coral); }
+
+        /* MAIN HERO */
+        .hero { background-color: var(--brand-cream); padding: 80px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .hero-layout { display: flex; gap: 60px; align-items: center; }
+        
+        .hero-main { flex: 1; }
+        .hero-image-block { position: relative; width: 100%; height: auto; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .hero-image-block img { width: 100%; height: auto; display: block; }
+        .si-puedes { position: absolute; bottom: 20px; left: 20px; color: var(--brand-coral); font-family: 'Caveat', cursive; font-size: 4rem; text-shadow: 2px 2px 5px rgba(255,255,255,0.7); }
+        .hero-sub { color: var(--brand-coral); font-size: 1.1rem; font-weight: 300; margin-top: 15px; letter-spacing: 1px; }
+
+        .hero-side { flex: 0 0 320px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .hero-side img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .side-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 60%); display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+        
+        /* ESPACIO SECTION */
+        .espacio { padding: 80px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-family: 'Caveat', cursive; font-size: 3.5rem; color: var(--brand-coral); letter-spacing: 2px; }
+        .section-header p { font-weight: 300; font-size: 1rem; color: #555; }
+        
+        .espacio-layout { display: flex; gap: 40px; }
+        .espacio-side-full { flex: 1; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .espacio-side-full img { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .espacio-side-full h3 { position: absolute; bottom: 20px; left: 20px; color: var(--brand-coral); font-family: 'Caveat', cursive; font-size: 2.5rem; text-shadow: 1px 1px 4px rgba(255,255,255,0.7); }
+
+        .espacio-side-half { flex: 0 0 calc(33.33% - 20px); display: flex; flex-direction: column; gap: 20px; }
+        .espacio-half-block { flex: 1; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .espacio-half-block img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+        /* EVENTOS SECTION */
+        .eventos { background-color: #e9e0d6; padding: 100px 0; }
+        .eventos-header { display: flex; align-items: flex-end; gap: 20px; border-bottom: 2px solid #5a7d65; padding-bottom: 10px; margin-bottom: 60px; }
+        .eventos-title { font-size: 1.8rem; font-weight: 700; color: #1a2a47; font-family: 'Playfair Display', serif; }
+        .eventos-sub { font-size: 1.1rem; color: #5a7d65; font-weight: 400; }
+        
+        .eventos-grid { display: flex; gap: 40px; flex-wrap: wrap; }
+        .eventos-column-main { flex: 0 0 calc(66.66% - 20px); }
+        .eventos-illustration { border: 2px solid #5a7d65; border-radius: 10px; padding: 20px; text-align: center; }
+        .run-and-coffee-img { width: 100%; height: auto; max-width: 400px; }
+        
+        .eventos-text-block { margin-top: 30px; border-left: 2px solid #5a7d65; padding-left: 20px; }
+        .eventos-tag { color: #5a7d65; font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
+        .eventos-info { font-weight: 300; font-size: 1rem; color: #1a2a47; margin-top: 10px; }
+
+        .eventos-column-side { flex: 1; display: flex; flex-direction: column; gap: 30px; }
+        .polaroid { background-color: white; padding: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; position: relative; max-width: 250px; margin: 0 auto; }
+        .polaroid img { width: 100%; height: auto; display: block; }
+        .polaroid-caption { font-family: 'Caveat', cursive; font-size: 1.1rem; color: #333; margin-top: 5px; text-align: center; }
+        .polaroid.angled { transform: rotate(-3deg); }
+        
+        /* PET FRIENDLY SECTION */
+        .pet-friendly { padding: 80px 0; border-top: 1px solid rgba(0,0,0,0.1); }
+        .pet-friendly-layout { display: flex; gap: 40px; align-items: center; }
+        .pet-friendly-text { flex: 1; }
+        .perros-bienvenidos { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--brand-coral); margin-bottom: 20px; }
+        .perros-info { font-weight: 300; font-size: 1rem; color: #555; margin-bottom: 20px; }
+        
+        .pet-friendly-image { flex: 0 0 250px; position: relative; }
+        .pet-friendly-polaroid { background-color: white; padding: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; position: relative; }
+        .pet-friendly-polaroid img { width: 100%; height: auto; display: block; }
+        .pet-friendly-caption { font-family: 'Caveat', cursive; font-size: 1rem; color: #333; margin-top: 5px; text-align: center; }
+        
+        /* FOOTER */
+        footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0 20px; border-top: 2px solid var(--brand-coral); font-weight: 300; font-size: 0.9rem; }
+        .footer-content { display: flex; gap: 60px; justify-content: space-between; }
+        
+        .footer-logo-block { display: flex; flex-direction: column; align-items: center; }
+        .footer-logo-text { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--brand-coral); text-transform: uppercase; letter-spacing: 2px; }
+        .footer-tag { color: var(--brand-coral); font-size: 0.8rem; font-weight: 300; letter-spacing: 1px; margin-top: -5px; }
+        .footer-location { font-size: 0.8rem; font-family: 'Caveat', cursive; margin-top: 5px; }
+
+        .footer-section { flex: 1; }
+        .footer-section h4 { color: white; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; font-size: 1rem; }
+        .footer-list { list-style: none; }
+        .footer-list li { margin-bottom: 8px; }
+        .footer-list a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s ease; }
+        .footer-list a:hover { color: white; }
+
+        .footer-contact-block { display: flex; gap: 15px; align-items: center; margin-bottom: 10px; }
+        .footer-icon { color: var(--brand-coral); font-size: 1.2rem; }
+        .footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.8rem; }
+        
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 992px) {
+            .hero-layout { flex-direction: column; gap: 40px; }
+            .hero-side { flex: 0 0 auto; width: 100%; max-width: 320px; margin: 0 auto; }
+            .espacio-layout { flex-direction: column; gap: 20px; }
+            .espacio-side-full { flex: 0 0 auto; height: 300px; }
+            .espacio-side-half { flex: 0 0 auto; flex-direction: row; width: 100%; }
+            .eventos-column-main { flex: 1 1 100%; }
+            .eventos-column-side { flex: 1 1 100%; flex-direction: row; justify-content: space-around; gap: 20px; }
+            .pet-friendly-layout { flex-direction: column-reverse; gap: 40px; text-align: center; }
+            .footer-content { flex-direction: column; gap: 40px; align-items: center; }
+            .footer-section { text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            header .logo-text { font-size: 2.5rem; }
+            nav ul { flex-direction: column; gap: 15px; align-items: center; }
+            .si-puedes { font-size: 3rem; }
+            .perros-bienvenidos { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo-group">
+                <div class="logo-text">TRUEN<span>⚡</span></div>
+                <div class="tagline">COFFEE HOUSE</div>
+                <div class="location">CABO SAN LUCAS | ESPECIALIDAD, PET FRIENDLY, COMUNIDAD</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="menu.html">MENÚ</a></li>
+                    <li><a href="historia.html">HISTORIA</a></li>
+                    <li><a href="eventos.html">EVENTOS</a></li>
+                    <li><a href="visitanos.html">VISÍTANOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container hero-layout">
+            <div class="hero-main">
+                <div class="hero-image-block">
+                    <img src="https://via.placeholder.com/800x600/f8f4ef/d1755a?text=%28Imágen+0%29+Cerámica+%22Si+puedes.%22+y+Latte+Art" alt="Cerámica Trueno 'Si puedes.' y Latte Art">
+                    <div class="si-puedes">SI PUEDES.</div>
+                </div>
+                <div class="hero-sub">El Trueno: donde cada detalle cuenta.</div>
+            </div>
+            <div class="hero-side">
+                <img src="https://via.placeholder.com/320x600/f8f4ef/d1755a?text=%28Imágenes+2+o+0%29+Iced+Coffee+en+el+Sol+y+Can" alt="Iced Coffee Trueno">
+                <div class="side-overlay">
+                    <div>
+                        <span class="icon">&#128293;</span> <div class="hand-written text-coral text-bold">TRUENO COFFEE CAN</div>
+                        <div class="hero-info text-coral text-bold">Nuestra especialidad embotellada.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="espacio">
+        <div class="container">
+            <div class="section-header">
+                <h2>NUESTRA ESENCIA</h2>
+                <p>Del arte cerámico a la comunidad en movimiento, cada rincón es Trueno.</p>
+            </div>
+            <div class="espacio-layout">
+                <div class="espacio-side-full">
+                    <img src="https://via.placeholder.com/600x600/ffffff/1a2a47?text=%28Imágen+3%29+Fachada+Moderna" alt="Fachada Trueno Coffee House">
+                    <h3>EL ESPACIO</h3>
+                </div>
+                <div class="espacio-side-half">
+                    <div class="espacio-half-block">
+                        <img src="https://via.placeholder.com/400x300/f8f4ef/1a2a47?text=%28Imágen+5%29+Interior+%2B+Tejas+Tierra" alt="Interior Trueno con Tejas Tierra">
+                    </div>
+                    <div class="espacio-half-block">
+                        <img src="https://via.placeholder.com/400x300/f8f4ef/d1755a?text=%28Imágen+0%29+%22Si+puedes.%22+detalle" alt="Detalle Trueno Coffee Art">
+                    </div>
+                    <div class="espacio-half-block">
+                        <img src="https://via.placeholder.com/400x300/e9e0d6/d1755a?text=Bakery+%26+Dulces" alt="Ilustración Bakery Trueno">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eventos">
+        <div class="container">
+            <div class="eventos-header">
+                <div class="eventos-title">CABO RUN AND COFFEE</div>
+                <div class="eventos-sub">| BAKERY EVENTS | MÚSICA | COMUNIDAD</div>
+            </div>
+            <div class="eventos-grid">
+                <div class="eventos-column-main">
+                    <div class="eventos-illustration">
+                        <img src="https://via.placeholder.com/600x400/e9e0d6/d1755a?text=Run+and+Coffee+%2B+Bakery" alt="Cabo Run and Coffee Illustration" class="run-and-coffee-img">
+                    </div>
+                    <div class="eventos-text-block">
+                        <div class="eventos-tag">ÚNETE A NUESTRA COMUNIDAD.</div>
+                        <p class="eventos-info">Actividades semanales para todos los gustos. Desde carreras por la playa hasta talleres de repostería artesanal. Siempre con el mejor café.</p>
+                    </div>
+                </div>
+                <div class="eventos-column-side">
+                    <div class="polaroid">
+                        <img src="https://via.placeholder.com/250x250/ffffff/d1755a?text=Runners+en+la+Playa" alt="Trueno Runners">
+                        <div class="polaroid-caption">Corriendo Juntos.</div>
+                    </div>
+                    <div class="polaroid angled">
+                        <img src="https://via.placeholder.com/250x250/ffffff/d1755a?text=Taller+Postres" alt="Trueno Bakery Class">
+                        <div class="polaroid-caption">Arte en Harina.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pet-friendly">
+        <div class="container pet-friendly-layout">
+            <div class="pet-friendly-text">
+                <div class="perros-bienvenidos">PERROS BIENVENIDOS</div>
+                <p class="perros-info">Un café para ti y un premio para tu mejor amigo. Siempre Pet Friendly. ¡Incluso tenemos un menú de agua para perros!</p>
+                <div class="hand-written text-coral text-bold">¡Los Esperamos!</div>
+            </div>
+            <div class="pet-friendly-image">
+                <div class="pet-friendly-polaroid">
+                    <img src="https://via.placeholder.com/250x250/ffffff/d1755a?text=%28Imágen+1%29+Perro+y+Can" alt="Perro Trueno Pet Friendly">
+                    <div class="pet-friendly-caption">Un Amigo Trueno.</div>
+                </div>
+                <div style="position: absolute; bottom: -20px; left: -20px; transform: rotate(-5deg);">
+                    <div class="hand-written text-coral" style="font-size: 1.5rem;">"¡Sí puedes!"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section footer-logo-block">
+                <div class="footer-logo-text">TRUEN<span>⚡</span></div>
+                <div class="footer-tag">COFFEE HOUSE</div>
+                <div class="footer-location">CABO SAN LUCAS, BAJA CALIFORNIA SUR</div>
+            </div>
+            <div class="footer-section">
+                <h4>NUESTROS ESPACIOS</h4>
+                <ul class="footer-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">El Menú</a></li>
+                    <li><a href="historia.html">Nuestra Historia</a></li>
+                    <li><a href="eventos.html">Comunidad y Eventos</a></li>
+                    <li><a href="visitanos.html">Visítanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTÁCTANOS</h4>
+                <div class="footer-contact-block">
+                    <span class="footer-icon">&#128222;</span> <div>
+                        <div class="text-bold">+1 (150) 327-8990</div>
+                    </div>
+                </div>
+                <div class="footer-contact-block">
+                    <span class="footer-icon">&#9993;</span> <div>
+                        <div class="text-bold">info@coffeehousetrueno.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>SÍGUENOS</h4>
+                <ul class="footer-list">
+                    <li><a href="https://instagram.com/coffeehousetrueno" target="_blank">Instagram</a></li>
+                    <li><a href="https://facebook.com/coffeehousetrueno" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            &copy; <span id="currentYear"></span> Trueno Coffee House. Todos los derechos reservados. | Creado para Cabo con Amor.
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
