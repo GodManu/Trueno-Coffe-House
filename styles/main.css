@@ -134,3 +134,60 @@ footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0
     .si-puedes { font-size: 3rem; }
     .perros-bienvenidos { font-size: 2.5rem; }
 }
+/* MENU STYLES */
+.menu-section { padding: 60px 0; background-color: var(--brand-cream); }
+.menu-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 50px; 
+    margin-top: 40px; 
+}
+
+.menu-category h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: var(--brand-coral);
+    border-bottom: 2px dashed var(--brand-coral);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.item-name {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--brand-dark-blue);
+}
+
+.item-price {
+    font-weight: 700;
+    color: var(--brand-coral);
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-illustration {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.menu-illustration img {
+    max-width: 150px;
+    opacity: 0.8;
+}
+
+/* Ajuste para los postresitos mencionados en el prompt */
+.postres-badge {
+    background-color: var(--brand-coral);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
