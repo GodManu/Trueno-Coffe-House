@@ -35,6 +35,7 @@ nav a:hover { color: var(--brand-coral); }
 /* MAIN HERO */
 .hero { background-color: var(--brand-cream); padding: 80px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
 .hero-layout { display: flex; gap: 60px; align-items: center; }
+
 .hero-main { flex: 1; }
 .hero-image-block { position: relative; width: 100%; height: auto; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 .hero-image-block img { width: 100%; height: auto; display: block; }
@@ -50,6 +51,7 @@ nav a:hover { color: var(--brand-coral); }
 .section-header { text-align: center; margin-bottom: 60px; }
 .section-header h2 { font-family: 'Caveat', cursive; font-size: 3.5rem; color: var(--brand-coral); letter-spacing: 2px; }
 .section-header p { font-weight: 300; font-size: 1rem; color: #555; }
+
 .espacio-layout { display: flex; gap: 40px; }
 .espacio-side-full { flex: 1; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 .espacio-side-full img { width: 100%; height: 100%; display: block; object-fit: cover; }
@@ -64,10 +66,12 @@ nav a:hover { color: var(--brand-coral); }
 .eventos-header { display: flex; align-items: flex-end; gap: 20px; border-bottom: 2px solid #5a7d65; padding-bottom: 10px; margin-bottom: 60px; }
 .eventos-title { font-size: 1.8rem; font-weight: 700; color: #1a2a47; font-family: 'Playfair Display', serif; }
 .eventos-sub { font-size: 1.1rem; color: #5a7d65; font-weight: 400; }
+
 .eventos-grid { display: flex; gap: 40px; flex-wrap: wrap; }
 .eventos-column-main { flex: 0 0 calc(66.66% - 20px); }
 .eventos-illustration { border: 2px solid #5a7d65; border-radius: 10px; padding: 20px; text-align: center; }
 .run-and-coffee-img { width: 100%; height: auto; max-width: 400px; }
+
 .eventos-text-block { margin-top: 30px; border-left: 2px solid #5a7d65; padding-left: 20px; }
 .eventos-tag { color: #5a7d65; font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
 .eventos-info { font-weight: 300; font-size: 1rem; color: #1a2a47; margin-top: 10px; }
@@ -84,6 +88,7 @@ nav a:hover { color: var(--brand-coral); }
 .pet-friendly-text { flex: 1; }
 .perros-bienvenidos { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--brand-coral); margin-bottom: 20px; }
 .perros-info { font-weight: 300; font-size: 1rem; color: #555; margin-bottom: 20px; }
+
 .pet-friendly-image { flex: 0 0 250px; position: relative; }
 .pet-friendly-polaroid { background-color: white; padding: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; position: relative; }
 .pet-friendly-polaroid img { width: 100%; height: auto; display: block; }
@@ -92,6 +97,7 @@ nav a:hover { color: var(--brand-coral); }
 /* FOOTER */
 footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0 20px; border-top: 2px solid var(--brand-coral); font-weight: 300; font-size: 0.9rem; }
 .footer-content { display: flex; gap: 60px; justify-content: space-between; }
+
 .footer-logo-block { display: flex; flex-direction: column; align-items: center; }
 .footer-logo-text { font-family: 'Caveat', cursive; font-size: 3rem; color: var(--brand-coral); text-transform: uppercase; letter-spacing: 2px; }
 .footer-tag { color: var(--brand-coral); font-size: 0.8rem; font-weight: 300; letter-spacing: 1px; margin-top: -5px; }
@@ -108,6 +114,26 @@ footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0
 .footer-icon { color: var(--brand-coral); font-size: 1.2rem; }
 .footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.8rem; }
 
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 992px) {
+    .hero-layout { flex-direction: column; gap: 40px; }
+    .hero-side { flex: 0 0 auto; width: 100%; max-width: 320px; margin: 0 auto; }
+    .espacio-layout { flex-direction: column; gap: 20px; }
+    .espacio-side-full { flex: 0 0 auto; height: 300px; }
+    .espacio-side-half { flex: 0 0 auto; flex-direction: row; width: 100%; }
+    .eventos-column-main { flex: 1 1 100%; }
+    .eventos-column-side { flex: 1 1 100%; flex-direction: row; justify-content: space-around; gap: 20px; }
+    .pet-friendly-layout { flex-direction: column-reverse; gap: 40px; text-align: center; }
+    .footer-content { flex-direction: column; gap: 40px; align-items: center; }
+    .footer-section { text-align: center; }
+}
+
+@media (max-width: 768px) {
+    header .logo-text { font-size: 2.5rem; }
+    nav ul { flex-direction: column; gap: 15px; align-items: center; }
+    .si-puedes { font-size: 3rem; }
+    .perros-bienvenidos { font-size: 2.5rem; }
+}
 /* MENU STYLES */
 .menu-section { padding: 60px 0; background-color: var(--brand-cream); }
 .menu-grid { 
@@ -116,6 +142,7 @@ footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0
     gap: 50px; 
     margin-top: 40px; 
 }
+
 .menu-category h3 {
     font-family: 'Caveat', cursive;
     font-size: 2.2rem;
@@ -124,39 +151,117 @@ footer { background-color: var(--brand-dark-blue); color: white; padding: 60px 0
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
 .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 12px;
 }
-.item-name { font-weight: 400; font-size: 1.1rem; color: var(--brand-dark-blue); }
-.item-price { font-weight: 700; color: var(--brand-coral); }
 
-/* VISIT STYLES */
-.visit-container { padding: 80px 0; display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
-.visit-info h3 { font-family: 'Caveat', cursive; font-size: 2.5rem; color: var(--brand-coral); margin-bottom: 30px; }
-.info-block { margin-bottom: 40px; }
-.info-block h4 { text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; color: var(--brand-dark-blue); margin-bottom: 10px; border-bottom: 1px solid var(--brand-coral); display: inline-block; }
-.hours-list { list-style: none; font-weight: 300; }
-.hours-list li { display: flex; justify-content: space-between; margin-bottom: 5px; max-width: 250px; }
-.map-wrapper { width: 100%; height: 500px; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid white; }
-.map-wrapper iframe { width: 100%; height: 100%; filter: grayscale(0.2) contrast(1.1); }
-.visit-cta { margin-top: 30px; padding: 20px; background-color: var(--brand-dark-blue); color: white; border-radius: 10px; text-align: center; }
-
-/* RESPONSIVE MEDIA QUERIES */
-@media (max-width: 992px) {
-    .hero-layout, .espacio-layout, .visit-container { flex-direction: column; gap: 40px; }
-    .hero-side { flex: 0 0 auto; width: 100%; max-width: 320px; margin: 0 auto; }
-    .espacio-side-half { flex: 0 0 auto; flex-direction: row; width: 100%; }
-    .eventos-column-main, .eventos-column-side { flex: 1 1 100%; }
-    .pet-friendly-layout { flex-direction: column-reverse; gap: 40px; text-align: center; }
-    .footer-content { flex-direction: column; gap: 40px; align-items: center; }
+.item-name {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--brand-dark-blue);
 }
 
-@media (max-width: 768px) {
-    header .logo-text { font-size: 2.5rem; }
-    nav ul { flex-direction: column; gap: 15px; align-items: center; }
-    .si-puedes { font-size: 3rem; }
-    .perros-bienvenidos { font-size: 2.5rem; }
+.item-price {
+    font-weight: 700;
+    color: var(--brand-coral);
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-illustration {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.menu-illustration img {
+    max-width: 150px;
+    opacity: 0.8;
+}
+
+/* Ajuste para los postresitos mencionados en el prompt */
+.postres-badge {
+    background-color: var(--brand-coral);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+/* VISIT STYLES */
+.visit-container {
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info a la izquierda, Mapa a la derecha */
+    gap: 60px;
+    align-items: start;
+}
+
+.visit-info h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: var(--brand-coral);
+    margin-bottom: 30px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: var(--brand-dark-blue);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--brand-coral);
+    display: inline-block;
+}
+
+.hours-list {
+    list-style: none;
+    font-weight: 300;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    max-width: 250px;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid white;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.2) contrast(1.1); /* Toque aesthetic para el mapa */
+}
+
+.visit-cta {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--brand-dark-blue);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .visit-container {
+        grid-template-columns: 1fr;
+    }
+    .map-wrapper {
+        height: 350px;
+    }
 }
